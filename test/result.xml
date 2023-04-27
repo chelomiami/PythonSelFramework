@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="3" time="20.890" timestamp="2023-04-27T12:37:22.300495" hostname="LAPTOP-RFG47RQB"><testcase classname="test_HomePage.TestHomePage" name="test_formSubmission[getData0]" time="9.057" /><testcase classname="test_HomePage.TestHomePage" name="test_formSubmission[getData1]" time="0.904" /><testcase classname="test_e2e.TestOne" name="test_e2e" time="10.844"><failure message="TypeError: 'WebElement' object is not iterable">self = &lt;test.test_e2e.TestOne object at 0x000002064E945950&gt;
+
+    def test_e2e(self):
+        log = self.getLogger()
+        homePage = HomePage(self.driver)
+        checkoutpage = homePage.shopItems()
+        log.info("getting all the card titles")
+        cards = checkoutpage.getCardTitles()
+        i = -1
+&gt;       for card in cards:
+E       TypeError: 'WebElement' object is not iterable
+
+test_e2e.py:23: TypeError</failure></testcase></testsuite></testsuites>
